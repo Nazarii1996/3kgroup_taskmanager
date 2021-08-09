@@ -3,7 +3,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">Список заданий</div>
+                    <div class="card-header">Список заданий   <add-task :statuses="statuses" ></add-task></div>
 
                     <div class="card-body">
                         <table class="table table-bordered">
@@ -53,6 +53,7 @@
                 it.getList();
             });
         },
+        props:['statuses'],
         data(){
             return {
                 list:{},

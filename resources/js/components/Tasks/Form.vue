@@ -55,7 +55,6 @@
             </div>
 
             <button type="button" @click="isShow=false;" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-           {{type}}
             <button type="button" @click="type=='create'?addTask():updateTask(task_id)" class="btn btn-primary">{{type=='create'?'Створити завдання':'Зберегти'}}</button>
 
         </template>

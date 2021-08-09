@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Tasks;
+use App\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -24,8 +25,11 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $data['statuses']=Tasks::$statuses;
+        return view('home',$data);
+    }
 
-
-        return view('home');
+    public function users(){
+        return view('users',['users'=>User::all()]);
     }
 }

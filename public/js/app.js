@@ -2052,7 +2052,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 // main.js
 
 
@@ -2217,6 +2216,7 @@ __webpack_require__.r(__webpack_exports__);
       it.getList();
     });
   },
+  props: ['statuses'],
   data: function data() {
     return {
       list: {},
@@ -46415,7 +46415,7 @@ var render = function() {
               },
               [_vm._v("Закрыть")]
             ),
-            _vm._v("\n           " + _vm._s(_vm.type) + "\n            "),
+            _vm._v(" "),
             _c(
               "button",
               {
@@ -46471,7 +46471,15 @@ var render = function() {
     _c("div", { staticClass: "row justify-content-center" }, [
       _c("div", { staticClass: "col-md-12" }, [
         _c("div", { staticClass: "card" }, [
-          _c("div", { staticClass: "card-header" }, [_vm._v("Список заданий")]),
+          _c(
+            "div",
+            { staticClass: "card-header" },
+            [
+              _vm._v("Список заданий   "),
+              _c("add-task", { attrs: { statuses: _vm.statuses } })
+            ],
+            1
+          ),
           _vm._v(" "),
           _c(
             "div",

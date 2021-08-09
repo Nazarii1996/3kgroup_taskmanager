@@ -20,6 +20,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/users', 'HomeController@users')->name('users');
 
 Route::resource('api/task','Api\TaskManagerApiController')->except(['edit'])->middleware('auth');
 Route::get('api/users','Api\UsersApiController@index')->middleware(('auth'));
+

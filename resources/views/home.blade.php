@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-    <list></list>
+    <list :statuses='@json($statuses)'></list>
 @endsection
